@@ -22,3 +22,29 @@ _INPUT = "2\n3 9\n17 24";
 */
 
 //----- Start your code here -------
+console.log(_INPUT);	
+INPUT = _INPUT.split("\n");
+for(i=1;i< INPUT.length;i++){
+	R=INPUT[i].split(' ');
+	a= R[0];
+	b= R[1];
+	c=0;
+	while (a<b){
+	 	if(a<0)
+ 		{
+ 			console.log("Error no existen Raices Negativas");
+ 			break;
+ 		}
+ 		else{
+	 		r=Math.sqrt(a);
+ 			if(r % 1!=0){
+	 			a++;
+ 			}
+			else{
+ 				c++;
+ 				a++;
+ 			}
+ 		}
+ 	}
+	console.log(c);
+}
